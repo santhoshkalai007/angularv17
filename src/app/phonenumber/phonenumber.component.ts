@@ -8,7 +8,7 @@ import { AppService } from '../app.service';
 })
 export class PhonenumberComponent {
   phoneNumber: any;
-  countrycode: string = "+1"; 
+  countrycode: any; 
 
   public phoneform: any;
   submitted =false;
