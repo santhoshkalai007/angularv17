@@ -61,7 +61,7 @@ export class ResponseComponent {
           this.snackbar.open(result.response, "", {
             duration: 2000,
           })
-          this.router.navigate(['/getlist'])
+          this.router.navigate([''])
         }
       })
     } else {
@@ -74,7 +74,7 @@ export class ResponseComponent {
   }
 
   back() {
-    this.router.navigate(['/getlist'])
+    this.router.navigate([''])
   }
 }
 

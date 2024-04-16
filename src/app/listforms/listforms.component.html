@@ -1,5 +1,8 @@
+
+
 <div>
     <table mat-table class="table">
+      <thead>
         <tr>
           <th class="w_12">ID</th>
           <th class="w_12">NAME</th>
@@ -8,6 +11,9 @@
           <th class="w_12">COMPANY NAME</th>
           <th class="w_12">ACTION</th>
         </tr>
+      </thead>
+      <tbody>
+        
         <tr class="text_center" *ngFor ="let list of lists; let i = index">
           <td><span>{{list.id}}</span></td>
           <td><span>{{list.name}}</span></td>
@@ -32,8 +38,9 @@
             </span>
           </td>
         </tr>
+      </tbody>
     </table>
-  </div>  
+</div>  
 
 
 <!-- <button type="button" (click)="fun()">Click me!</button> -->

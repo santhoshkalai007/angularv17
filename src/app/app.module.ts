@@ -7,11 +7,11 @@ import { ListformsComponent } from './listforms/listforms.component';
 import { ResponseComponent } from './response/response.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatIconModule} from '@angular/material/icon';
-import {MatMenuModule} from '@angular/material/menu';
-import {MatButtonModule} from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatButtonModule } from '@angular/material/button';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import {MatCardModule} from '@angular/material/card';
+import { MatCardModule } from '@angular/material/card';
 import { MatToolbarModule } from '@angular/material/toolbar';
 
 import { HttpClientModule } from '@angular/common/http';
@@ -20,20 +20,28 @@ import { RouterModule, Routes } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 
+import { SubmitformComponent } from './submitform/submitform.component';
+
+import { FeedbackComponent } from './feedback/feedback.component';
+import { PhonenumberComponent } from './phonenumber/phonenumber.component';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+
 import { CommonModule } from '@angular/common';
 
 import { FlexLayoutServerModule } from '@angular/flex-layout/server';
-const Routes: Routes=[
-  // {path:'',component:TestlistComponent},
-  {path:'getlist',component:ListformsComponent},
-  
-  {path:'response',component:ResponseComponent}
-  ]
+// const Routes: Routes = [
+// {path:'',component:TestlistComponent},
+//   { path: 'getlist', component: ListformsComponent },
+//   { path: 'response', component: ResponseComponent }
+// ]
 @NgModule({
   declarations: [
     AppComponent,
     ListformsComponent,
-    ResponseComponent
+    ResponseComponent,
+    SubmitformComponent,
+    FeedbackComponent,
+    PhonenumberComponent,
   ],
   imports: [
     BrowserModule,
@@ -49,7 +57,7 @@ const Routes: Routes=[
     MatToolbarModule,
 
     HttpClientModule,
-    RouterModule.forRoot(Routes),
+    RouterModule,
     ReactiveFormsModule,
     FormsModule,
 
@@ -57,7 +65,7 @@ const Routes: Routes=[
 
     FlexLayoutServerModule
   ],
-  providers: [AppService,provideClientHydration()],
+  providers: [AppService, provideClientHydration(),provideAnimationsAsync()],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
