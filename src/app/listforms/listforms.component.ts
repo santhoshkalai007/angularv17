@@ -42,4 +42,8 @@ export class ListformsComponent  implements OnInit{
     this.router.navigate(['/response', i])
     console.log('clicked');
   }
+    Click(i: any) {
+      this.router.navigate(['/feedback', i])
+      console.log('clicked');
+  }
 }

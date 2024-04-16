@@ -25,10 +25,12 @@
                     <mat-icon>list_alt</mat-icon>
                     <span >Response</span>
                   </button>
-                  <button *ngIf="list.status == 'Responsed'" mat-menu-item>
+                  
+                  <button *ngIf="list.status == 'Responsed'" mat-menu-item (click)="Click(list)">
                     <mat-icon>feedbacks</mat-icon>
                     <span>Feedback & Rating</span>
                   </button>
+                  
               </mat-menu>
             </span>
           </td>
