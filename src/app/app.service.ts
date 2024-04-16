@@ -6,19 +6,14 @@ import { Observable } from 'rxjs'
   providedIn: 'root'
 })
 export class AppService {
-  submitFeedback(value: any) {
-    throw new Error('Method not implemented.');
-  }                          
-  baseurl = 'http://192.168.1.130:8088/';
-  constructor(
-    public http: HttpClient
-  ) { }
 
-  getheader() {
-    var header = new HttpHeaders({
-      'Accept': '*/*',
-             
-    })
+  view_details=[]
+  baseurl ='http://192.168.1.130:8088/'
+  constructor(
+    public http:HttpClient
+  ) { }
+  getheader(){
+    var header = new HttpHeaders({'Accept':'*/*'})
     return header;
   }
 
