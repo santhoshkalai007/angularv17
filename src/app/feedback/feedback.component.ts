@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder} from '@angular/forms';
 import { AppService } from '../app.service';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-feedback',
@@ -10,17 +12,14 @@ import { AppService } from '../app.service';
 export class FeedbackComponent {
   star: number[] = [1, 2, 3, 4, 5];
 
-
   public feedback: any;
   submitted = false;
   feedbacks: any;
   starRating = 0;
   currentRate = 3.14;
-  router: any;
-getlist: any;
-list: any;
-  constructor(private formbuilder: FormBuilder, private appService: AppService) {
-
+  getlist: any;
+  list: any;
+  constructor(private formbuilder: FormBuilder, private appService: AppService, private router: Router ) {
 
   }
   ngOnInit(): void {
@@ -46,15 +45,5 @@ list: any;
       console.log(datas)
     }
   }
-  Click(i: any) {
-    this.router.navigate(['/getlist', i])
-    console.log('clicked');
-
-
-}
-
-
-
-
 
 }

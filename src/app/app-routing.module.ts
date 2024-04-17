@@ -12,8 +12,8 @@ const routes: Routes = [
   {path:'feedback',component:FeedbackComponent},
   {path:'phonenumber',component:PhonenumberComponent},
 
-  { path: '', component: ListformsComponent },
-  { path: 'response/:id', component: ResponseComponent }
+  { path: 'getlist', component: ListformsComponent },
+  { path: 'response', component: ResponseComponent }
 ];
 
 @NgModule({
