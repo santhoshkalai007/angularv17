@@ -1,3 +1,4 @@
+
 <div>
     <table mat-table class="table">
       <thead>
@@ -20,7 +21,7 @@
           <td><span>{{list.company_name}}</span></td>
           <td class="bg-grey">
             <span class="pa-1 text_center border-rad-rgt">
-              <button mat-icon-button [matMenuTriggerFor] ="menu" aria-label="Example icon-button with a menu">
+              <button mat-icon-button [matMenuTriggerFor] ="menu1" aria-label="Example icon-button with a menu">
                 <mat-icon> more_vert</mat-icon>
               </button>
               <mat-menu #menu="matMenu">
@@ -41,6 +42,25 @@
       </tbody>
     </table>
 </div>  
+
+
+<button mat-icon-button [matMenuTriggerFor]="menu1" aria-label="Example icon-button with a menu">
+  <mat-icon>more_vert</mat-icon>
+</button>
+<mat-menu #menu1="matMenu">
+  <button mat-menu-item>
+    <mat-icon>dialpad</mat-icon>
+    <span>Redial</span>
+  </button>
+  <button mat-menu-item disabled>
+    <mat-icon>voicemail</mat-icon>
+    <span>Check voice mail</span>
+  </button>
+  <button mat-menu-item>
+    <mat-icon>notifications_off</mat-icon>
+    <span>Disable alerts</span>
+  </button>
+</mat-menu>
 
 
 <!-- <button type="button" (click)="fun()">Click me!</button> -->

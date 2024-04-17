@@ -2,6 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { AppService } from '../app.service';
 import { Router } from '@angular/router';
 
+import {MatIconModule} from '@angular/material/icon';
+import {MatMenuModule} from '@angular/material/menu';
+import {MatButtonModule} from '@angular/material/button';
+
 export class list{
   constructor(
     public id:number,
@@ -16,7 +20,10 @@ export class list{
 @Component({
   selector: 'app-listforms',
   templateUrl: './listforms.component.html',
-  styleUrl: './listforms.component.css'
+  styleUrl: './listforms.component.css',
+  // standalone: true,
+  // imports: [MatButtonModule, MatMenuModule, MatIconModule],
+  
 })
 export class ListformsComponent  implements OnInit{
   

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { AppService } from '../app.service';
+
 @Component({
   selector: 'app-submitform',
   templateUrl: './submitform.component.html',
@@ -40,7 +41,7 @@ export class SubmitformComponent {
   ngOnInit(): void {
     this.reactiveform = this.formBuilder.group({
       name: ['', Validators.required],
-      email: ['', (Validators.required, Validators.email)],
+      email: ['', Validators.required, Validators.email],
       phone_no: ['', Validators.required],
       company_name: [''],
       details: [''],

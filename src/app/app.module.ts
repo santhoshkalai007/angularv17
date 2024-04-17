@@ -5,9 +5,7 @@ import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ListformsComponent } from './listforms/listforms.component';
 import { ResponseComponent } from './response/response.component';
-// import{MatIconModule} from '@angular/material'
- 
-import {MatButton} from '@angular/material/button'
+import { MatButton} from '@angular/material/button';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatIconModule } from '@angular/material/icon';
@@ -19,7 +17,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 
 import { HttpClientModule } from '@angular/common/http';
 import { AppService } from './app.service';
-import { RouterModule, Routes } from '@angular/router';
+import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 
@@ -50,7 +48,7 @@ import { FlexLayoutServerModule } from '@angular/flex-layout/server';
     MatButton,
     BrowserModule,
     AppRoutingModule,
-    NgbModule,
+    NgbModule ,
 
     BrowserAnimationsModule,
     MatIconModule,
@@ -59,7 +57,7 @@ import { FlexLayoutServerModule } from '@angular/flex-layout/server';
     FlexLayoutModule,
     MatCardModule,
     MatToolbarModule,
-
+ 
     HttpClientModule,
     RouterModule,
     ReactiveFormsModule,
@@ -68,6 +66,10 @@ import { FlexLayoutServerModule } from '@angular/flex-layout/server';
     CommonModule,
 
     FlexLayoutServerModule
+  ], 
+  exports:[
+    MatMenuModule,
+     
   ],
   providers: [AppService, provideClientHydration(),provideAnimationsAsync()],
   bootstrap: [AppComponent]
