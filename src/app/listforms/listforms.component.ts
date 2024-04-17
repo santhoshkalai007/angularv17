@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AppService } from '../app.service';
 import { Router } from '@angular/router';
+
 export class list{
   constructor(
     public id:number,
@@ -28,9 +29,9 @@ export class ListformsComponent  implements OnInit{
   ){}
   ngOnInit(): void {
     this.appService.getmethod('queries/Getlist').subscribe(result => {
-      console.log(result);
+      // console.log(result);
       this.lists = result.response;
-      console.log(this.lists);
+      // console.log(this.lists);
 
       this.appService.view_details = [];
       this.appService.view_details = this.lists
@@ -40,5 +41,9 @@ export class ListformsComponent  implements OnInit{
   onClick(i: any) {
     this.router.navigate(['/response', i])
     console.log('clicked');
+  }
+    Click(i: any) {
+      this.router.navigate(['/feedback', i])
+      console.log('clicked');
   }
 }

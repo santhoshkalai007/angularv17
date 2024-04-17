@@ -16,6 +16,9 @@ export class FeedbackComponent {
   feedbacks: any;
   starRating = 0;
   currentRate = 3.14;
+  router: any;
+getlist: any;
+list: any;
   constructor(private formbuilder: FormBuilder, private appService: AppService) {
 
 
@@ -43,7 +46,9 @@ export class FeedbackComponent {
       console.log(datas)
     }
   }
-
+  Click(i: any) {
+    this.router.navigate(['/getlist', i])
+    console.log('clicked');
 
 
 }
@@ -52,4 +57,4 @@ export class FeedbackComponent {
 
 
 
-
+}
