@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { AppService } from '../app.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-feedback',
@@ -16,10 +17,10 @@ export class FeedbackComponent {
   feedbacks: any;
   starRating = 0;
   currentRate = 3.14;
-  router: any;
-getlist: any;
-list: any;
-  constructor(private formbuilder: FormBuilder, private appService: AppService) {
+ 
+  getlist: any;
+  list: any;
+  constructor(private formbuilder: FormBuilder, private appService: AppService,public router:Router) {
 
 
   }
@@ -39,6 +40,7 @@ list: any;
     if (this.feedback.valid) {
       this.appService.postmethod('queries/response/feedback/13', params).subscribe(result => {
         console.log(123)
+        
       })
       console.log(datas)
 
@@ -46,14 +48,15 @@ list: any;
       console.log(datas)
     }
   }
+  
   Click(i: any) {
-    this.router.navigate(['/getlist', i])
+    this.router.navigate(['/feedback', i])
     console.log('clicked');
 
-
 }
-
-
+back() {
+  this.router.navigate(['/getlist'])
+}
 
 
 

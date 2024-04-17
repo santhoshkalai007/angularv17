@@ -42,7 +42,7 @@ export class SubmitformComponent {
       name: ['', Validators.required],
       email: ['', (Validators.required, Validators.email)],
       phone_no: ['', Validators.required],
-      company_name: [''],
+      company_name: ['',Validators.required],
       details: [''],
       subject: [''],
       country_code: ['+91'],
@@ -55,6 +55,7 @@ export class SubmitformComponent {
   }
   showSuccessMessage = false;
   onSubmit(datas: any) {
+    this.submitted = true;
     var params = {
       'name': datas.name,
       'email': datas.email,

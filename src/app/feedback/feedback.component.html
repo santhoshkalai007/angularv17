@@ -4,7 +4,7 @@
 
     <div class="star">
       <label for="starRating"></label>
-      <ngb-rating [max]=5 [(rate)]="currentRate" formControlName="rating" [readonly]="false"></ngb-rating>
+      <ngb-rating [max]=5 [(rate)] ="currentRate" formControlName ="rating" [readonly] ="false"></ngb-rating>
 
     </div>
 
@@ -14,9 +14,12 @@
         <textarea type="text" class="form-control" type="textarea" formControlName="feedbacks"></textarea>
       </div>
       <br>
+      
       <button class="btn btn-primary" type="submit">Submit</button>
-       
-    
+       <div class="back">
+        <button type="button" class="btn btn-primary" (click)="back()">BACK</button>
+
+       </div>
 
     </div>
   </div>

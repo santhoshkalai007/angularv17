@@ -24,8 +24,8 @@ export class PhonenumberComponent {
   }
   onSubmit(datas: any) {
     var params = {
-      'phone_number': datas.phonenumber,
-      'country_code': datas.countryCode
+      'phone_number': datas.phone_number,
+      'country_code': datas.country_code
 
     }
     if (this.phoneform.valid) {

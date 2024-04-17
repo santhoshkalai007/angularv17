@@ -15,12 +15,12 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatIconModule } from '@angular/material/icon';
 import { MatCardModule } from '@angular/material/card';
 import {MatButton} from '@angular/material/button'
-
+import{FlexLayoutModule} from '@angular/flex-layout'
 import { AppService } from './app.service';
 import { RouterModule, Routes } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
-
+import{FlexLayoutServerModule} from '@angular/flex-layout/server';
 import { CommonModule } from '@angular/common';
 
 const Routes: Routes=[
@@ -51,7 +51,8 @@ const Routes: Routes=[
     MatIconModule ,
     MatCardModule,
     RouterModule.forRoot(Routes),
-    
+    FlexLayoutModule,
+    FlexLayoutServerModule
     
     
   ],

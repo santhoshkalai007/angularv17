@@ -3,6 +3,7 @@ th,
 td {
     border: 1px solid grey;
     border-collapse: collapse;
+    text-align: center;
 }
 
 table tr:nth-child(odd) {

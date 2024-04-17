@@ -25,7 +25,7 @@
           <div class="form-group">
             <label for="phone_no">Phone no</label>
             <input formControlName="phone_no" [ngClass]="reactiveform.value.phone_no== '' && submitted ?'invalid':''"
-              type="number" class="form-control" />
+              type="text" class="form-control" />
           </div>
           <div>
             <small style="color: rgb(255, 0, 0);" *ngIf="reactiveform.value.phone_no == '' && submitted">
@@ -34,11 +34,12 @@
           </div>
           <div class="form-group">
             <label for="company_name">Company Name</label>
-            <input formControlName="company_name" [ngClass]="reactiveform.value.name== '' && submitted ?'invalid':''"
+            <input formControlName="company_name" [ngClass]="reactiveform.value.company_name== '' && submitted ?'invalid':''"
               type="text" class="form-control" />
           </div>
           <div>
-            <small style="color: rgb(255, 0, 0);" *ngIf="reactiveform.value.name== '' && submitted">
+            <small style="color: rgb(255, 0, 0);" *ngIf="reactiveform.value.company_name== '' && submitted">
+              *company name Required
             </small>
           </div>
           <div class="form-group">
